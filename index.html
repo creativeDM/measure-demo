@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link
+        rel="stylesheet"
+        href="https://unpkg.com/tippy.js@6/animations/shift-toward.css"
+      />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400;1,500&family=Montserrat:wght@100..900&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+        <title>Measures</title>
+    </head>
+
+    <body>
+        <div id="app" class="flex flex-row flex-col-fluid">
+            <!--::Sidebar Left::-->
+            <aside class="app_sidebar fixed h-100 left-0 top-0 flex flex-col items-start">
+                <a class="block p-5">
+                    <img src="img/logo.svg" alt="">
+                </a>
+                <nav class="flex-grow-1 w-100">
+                    <a href="index.html" class="sidebar-link flex items-center">
+                        <span class="sidebar-link-icon flex items-center justify-center rounded-full bg-primary">
+                            <span class="material-icons">
+                                bar_chart
+                                </span>
+                        </span>
+                        <span class="sidebar-link-text">Dashboard</span>
+                    </a>
+                    <div class="dropdown">
+                        <a href="javascript:void(0)" class="sidebar-link flex items-center collapse-toggler">
+                            <span class="sidebar-link-icon flex items-center justify-center rounded-full bg-primary">
+                                <span class="material-icons">
+                                    people
+                                    </span>
+                            </span>
+                            <span class="sidebar-link-text">Users</span>
+                            <span class="sidebar-arrow material-icons">
+                                chevron_right
+                            </span>
+                        </a>
+                        <div class="collapse sidebar-secondary" id="users" style="display:none">
+                            <a href="index.html" class="sidebar-link flex items-center">
+                                <span class="sidebar-link-icon flex items-center justify-center rounded-full bg-primary">
+                                    <span class="material-icons">
+                                        add
+                                        </span>
+                                </span>
+                                <span class="sidebar-link-text">Add Users</span>
+                            </a>
+                            <a href="index.html" class="sidebar-link flex items-center">
+                                <span class="sidebar-link-icon flex items-center justify-center rounded-full bg-primary">
+                                    <span class="material-icons">
+                                        people
+                                        </span>
+                                </span>
+                                <span class="sidebar-link-text">View Users</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a href="javascript:void(0)" class="sidebar-link flex items-center collapse-toggler">
+                            <span class="sidebar-link-icon flex items-center justify-center rounded-full bg-primary">
+                                <span class="material-icons">
+                                    devices
+                                    </span>
+                            </span>
+                            <span class="sidebar-link-text">Devices</span>
+                            <span class="sidebar-arrow material-icons">
+                                chevron_right
+                            </span>
+                        </a>
+                        <div class="collapse sidebar-secondary" id="users" style="display:none">
+                            <a href="index.html" class="sidebar-link flex items-center">
+                                <span class="sidebar-link-icon flex items-center justify-center rounded-full bg-primary">
+                                    <span class="material-icons">
+                                        add
+                                        </span>
+                                </span>
+                                <span class="sidebar-link-text">Add Device</span>
+                            </a>
+                            <a href="index.html" class="sidebar-link flex items-center">
+                                <span class="sidebar-link-icon flex items-center justify-center rounded-full bg-primary">
+                                    <span class="material-icons">
+                                        laptop
+                                        </span>
+                                </span>
+                                <span class="sidebar-link-text">View Device</span>
+                            </a>
+                        </div>
+                    </div>
+                </nav>
+                <div class="small muted p-5">
+                    Proudly designed by <strong class="text-white">Wishup Co</strong>
+                </div>
+            </aside>
+            
+
+            <!--::Main::-->
+            <main class="main_content flex flex-col flex-row-fluid w-100 h-100">
+                <!--:Header:-->
+                <header class="container-full px-5 py-4 navbar navbar-top">
+                    <div class="flex justify-between items-center">
+                        <div class="d-lg-none">
+                           <button type="button" class="btn p-2 sidebar-toggler">
+                            <span class="material-icons">menu</span>
+                           </button>
+                        </div>
+                        <div class="page-title d-lg-block d-none">
+                            <ul class="list-inline">
+                                <li><a href="#!">User</a></li>
+                                <li><a href="#!" class="active">Add User</a></li>
+                            </ul>
+                        </div>
+                        <div class="app_search d-lg-block d-none">
+                            <form>
+                                <div class="relative">
+                                    <span class="material-icons muted absolute left-0 top-0">
+                                        search
+                                    </span>
+                                    <input type="text" class="input ps-5" placeholder="Seach...">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="app_meta">
+                            <div class="relative flex items-center">
+                                <a href="#!" class="navbar-link">
+                                    <span class="material-icons">
+                                        notifications
+                                    </span>
+                                </a>
+                                <a href="#!" class="navbar-link">
+                                    <span class="material-icons">
+                                        settings
+                                    </span>
+                                </a>
+                                <a href="#!" class="navbar-link">
+                                    <span class="material-icons">
+                                        <img class="rounded-full" width="32" height="32"
+                                            src="https://api.uifaces.co/our-content/donated/xZ4wg2Xj.jpg" alt="">
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <!--Inner Content::-->
+                <div class="page-title d-lg-none border-b py-4 px-5">
+                    <ul class="list-inline">
+                        <li><a href="#!">User</a></li>
+                        <li><a href="#!" class="active">Add User</a></li>
+                    </ul>
+                </div>
+                <div class="content-inner flex flex-grow-1 relative">
+                    <div class="flex-grow-1 p-5">
+                        <h2 class="fw-normal mb-5 text-primary">Add User</h2>
+                        <form id="form_add_user" action="#">
+                          <div class="row">
+                            <div class="col-lg-11">
+                                <div class="row">
+                                    <div class="col-lg-6 mb-4">
+                                        <label class="label-form block mb-2 font-serif" for="fName">First Name</label>
+                                        <input type="text" class="input" placeholder="First Name" id="fName">
+                                    </div>
+                                    <div class="col-lg-6 mb-4">
+                                        <label class="label-form block mb-2 font-serif" for="lName">Last Name</label>
+                                        <input type="text" class="input" placeholder="Last Name" id="lName">
+                                    </div>
+                                    <div class="col-lg-6 mb-4">
+                                        <label class="label-form block mb-2 font-serif" for="gender">Gender</label>
+                                        <div class="relative">
+                                            <input required type="text" class="input" placeholder="Male" id="gender">
+                                            <span class="right-0 top-50 middle-y absolute border rounded-full info-icon">
+                                                !
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 mb-4">
+                                        <label class="label-form block mb-2 font-serif" for="organization">Organization</label>
+                                        <div class="relative">
+                                            <input required type="text" class="input" placeholder="#23213" id="organization">
+                                            <span class="right-0 top-50 middle-y absolute border rounded-full info-icon" data-tippy-animation="shift-toward" data-tippy-trigger="click" data-tippy-placement="right"
+                                            data-tippy-content="<div class='tippy-template'>
+                                                <h5 class='tippy-template-header'>Organization</h5>
+                                                <ul class='tippy-template-body list-unstyled mb-0'>
+                                                    <li class='flex items-center mb-4'>
+                                                        <span class='material-icons text-success mr-3'>check_circle</span>
+                                                        <span class='font-serif'>Should be atleast 10 chars long</span>
+                                                    </li>
+                                                    <li class='flex items-center mb-4'>
+                                                        <span class='material-icons text-danger mr-3'>info</span>
+                                                        <span class='font-serif'>Should not include alphabets</span>
+                                                    </li>
+                                                    <li class='flex items-center'>
+                                                        <span class='material-icons text-danger mr-3'>info</span>
+                                                        <span class='font-serif'>Should not include special chars</span>
+                                                    </li>
+                                                </ul>
+                                            </div>">
+                                                !
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 mb-4">
+                                        <label class="label-form block mb-2 font-serif" for="username">Username</label>
+                                        <div class="relative">
+                                            <input required type="text" class="input" placeholder="@john123" id="username">
+                                            <span class="right-0 top-50 middle-y absolute border rounded-full info-icon">
+                                                !
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 mb-4">
+                                        <label class="label-form block mb-2 font-serif" for="password">Password</label>
+                                        <div class="relative">
+                                            <input required type="password" class="input" placeholder="****" id="password">
+                                            <span class="right-0 top-50 middle-y absolute border rounded-full info-icon">
+                                                !
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 text-right">
+                                        <button type="submit" class="btn btn-lg btn-icon btn-primary relative" data-tippy-animation="shift-toward" data-tippy-content="Add User" data-tippy-placement="left">
+                                            <span class="absolute top-0 left-0">
+                                               <span class="material-icons">add</span>
+                                            </span>   Add User
+                                           </button>
+                                    </div>
+                                </div>
+                               </div>
+                          </div>
+                        </form>
+                        <div class="p-5">
+                            <div class="tab-container">
+                                <div class="tab active" data-tab="tab-1">Tab 1</div>
+                                <div class="tab" data-tab="tab-2">Tab 2</div>
+                                <div class="tab" data-tab="tab-3">Tab 3</div>
+                                <div class="indicator"></div>
+                              </div>
+                              
+                              <div class="tab-content" id="tab-1">
+                                <p>Tab 1 content goes here.</p>
+                              </div>
+                              
+                              <div class="tab-content" id="tab-2">
+                                <p>Tab 2 content goes here.</p>
+                              </div>
+                              
+                              <div class="tab-content" id="tab-3">
+                                <p>Tab 3 content goes here.</p>
+                              </div>
+                              
+                              
+                        </div>
+                    </div>
+                    <div class="sidebar-content flex-shrink-0 bg-light">
+                        <div class="p-5 text-center d-flex flex-col justify-center">
+                            <h4 class="mb-0">Have any doubts or queries?</h4>
+                            <p class="p-4 font-serif">Our support team is always happy to help you and sort out your
+                                issues. KIndly get in touch with our admin for more info.</p>
+                            <img src="img/vector.svg" class="mx-auto block p-5" alt="">
+                            <a href="#!" class="btn btn-outline-primary">Contact Admin</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!--:Footer:-->
+                <footer class="container-full flex-shrink-0 p-5 border-top">
+                    <div class="flex justify-between items-center">
+                        <div class="flex-grow-1">
+                            <ul class="list-inline">
+                                <li><a href="#!">Policies</a></li>
+                                <li><a href="#!">Terms & Conditions</a></li>
+                            </ul>
+                        </div>
+                        <div class="flex-shirnk-0">
+                          <span class="muted">&copy;Copyright 2023</span>
+                        </div>
+                    </div>
+                </footer>
+            </main>
+        </div>
+
+<!--:Sidebar-backdrop:-->
+<div role="button" class="fixed inset-0 d-lg-none sidebar-backdrop"></div>
+        <!--:Scripts:-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <!-- Tooltip -->
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="https://unpkg.com/tippy.js@6"></script>
+<script type="module">
+     tippy('[data-tippy-content]', {
+        allowHTML:true,
+        appendTo:'parent',
+        animation:'shift-toward'
+      });
+
+      const template = document.querySelectorAll('.form-alert');
+
+tippy('#organization>.info-icon', {
+  content: template.innerHTML,
+  allowHTML: true,
+  animation: 'shift-toward',
+  appendTo:'parent'
+});
+</script>
+
+<!--:Validation:-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+<script>
+    $().ready(function() {
+    $("#form_add_user").validate({
+			rules: {
+				username: {
+					required: true,
+					minlength: 2
+				},
+				password: {
+					required: true,
+					minlength: 5
+				},
+				gender: {
+					required: true,
+				},
+                organization: {
+					required: true,
+				},
+			},
+			messages: {
+				username: {
+					required: "Please enter a username",
+					minlength: "Your username must consist of at least 2 characters"
+				},
+				password: {
+					required: "Please provide a password",
+					minlength: "Your password must be at least 5 characters long"
+				},
+				gender: "Please enter prefered gender",
+				organization: "Please enter organization name"
+			}
+        })})
+
+        const buttons = document.querySelectorAll('.sidebar-toggler, .sidebar-backdrop');
+const body = document.querySelector('body');
+
+function toggleClassOnBody() {
+  if (window.innerWidth <= 991) {
+    body.classList.toggle('is-sidebar');
+  } else {
+    body.classList.remove('is-sidebar');
+  }
+}
+
+function removeClassOnResize() {
+  if (window.innerWidth > 991) {
+    body.classList.remove('is-sidebar');
+  }
+}
+
+buttons.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    body.classList.toggle('is-sidebar');
+    if (window.innerWidth > 991) {
+      body.classList.remove('is-sidebar');
+    }
+  });
+});
+
+window.addEventListener('resize', removeClassOnResize);
+
+
+window.addEventListener('resize', removeClassOnResize);
+
+$('.collapse-toggler').click(function() {
+  const collapse = $(this).next('.collapse');
+  collapse.slideToggle();
+
+  $('.collapse').not(collapse).slideUp();
+  $('.collapse-toggler').not(this).removeClass('active');
+  $(this).toggleClass('active');
+});
+
+const tabs = document.querySelectorAll('.tab');
+const indicator = document.querySelector('.indicator');
+const tabContents = document.querySelectorAll('.tab-content');
+
+function setActiveTab(tab) {
+  // remove active class from all tabs
+  tabs.forEach(t => t.classList.remove('active'));
+
+  // add active class to clicked tab
+  tab.classList.add('active');
+
+  // set width of indicator to match width of tab
+  indicator.style.width = `${tab.offsetWidth}px`;
+
+  // move indicator to the clicked tab
+  indicator.style.transform = `translateX(${tab.offsetLeft}px)`;
+
+  // hide all tab contents
+  tabContents.forEach(tc => tc.classList.remove('active'));
+
+  // show the corresponding tab content
+  const tabContentId = tab.getAttribute('data-tab');
+  const tabContent = document.querySelector(`#${tabContentId}`);
+  tabContent.classList.add('active');
+}
+
+// set initial active tab
+setActiveTab(tabs[0]);
+
+// add click event listeners to tabs
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    setActiveTab(tab);
+  });
+});
+
+// handle window resize
+window.addEventListener('resize', () => {
+  // reposition indicator
+  const activeTab = document.querySelector('.tab.active');
+  indicator.style.width = `${activeTab.offsetWidth}px`;
+  indicator.style.transform = `translateX(${activeTab.offsetLeft}px)`;
+});
+
+</script>   
+</body>
+
+</html>
