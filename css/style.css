@@ -1,7 +1,7 @@
 :root{
     --sidebar-width:260px;
     --sidebar-content-width:326px;
-    --sidebar-bg:#17181d;
+    --sidebar-bg:#111111;
     --secondary:#353740;
     --sidebar-color:#aeaeae;
     --sidebar-hover-color:#fff;
@@ -168,9 +168,7 @@ a{
 img{
     max-width: 100%;
 }
-.muted{
-    color: var(--muted);
-}
+
 .text-center{
     text-align: center;
 }
@@ -374,13 +372,15 @@ color: var(--primary);
 .text-success{
     color: var(--success);
 }
+.muted{
+    color: var(--muted);
+}
 .rounded{
     border-radius: var(--rounded);
 }
 .rounded-full{
     border-radius: 100%;
 }
-
 .border-b{
     border-bottom: 1px solid var(--border-color);
 }
